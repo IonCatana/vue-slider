@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/bb3c8f3d06.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Vue Slider</title>
 </head>
+
 <body>
-  
+  <section>
+    <div class="container">
+      <div class="row">
+
+        <!-- Slide principale -->
+        <div class="main-slide col-10">
+        </div>
+
+        <!-- Menu slide -->
+        <div class="slide-menu col-2">
+
+          <!-- Lista slide -->
+          <div class="slide-list">
+          </div>
+
+          <!-- Controlli wrapper -->
+          <div class="controls-wrapper">
+            <div class="control arrow-up">
+              <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="control arrow-down">
+              <i class="fa fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
