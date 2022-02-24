@@ -11,28 +11,34 @@
 </head>
 
 <body>
-  <section>
+  <section id="app" class="carousel">
     <div class="container">
       <div class="row">
-
         <!-- Slide principale -->
         <div class="main-slide col-10">
+          <div v-for="slide in slidesArray" :class="{ 'slide' : true, 'active' : slide.active}">
+            <img :src="slide.item" alt="">
+            <div class="slide_info">
+              <h2 class="slide_title">{{ slide.title }}</h2>
+              <p class="slide_desc">{{ slide.text }}</p>
+            </div>
+          </div>
         </div>
-
         <!-- Menu slide -->
         <div class="slide-menu col-2">
-
           <!-- Lista slide -->
           <div class="slide-list">
-          </div>
-
-          <!-- Controlli wrapper -->
-          <div class="controls-wrapper">
-            <div class="control arrow-up">
-              <i class="fa fa-chevron-up"></i>
+            <div v-for="slide in slidesArray" :class="{ 'slide' : true, 'active' : slide.active}">
+              <img :src="slide.item" alt="">
             </div>
-            <div class="control arrow-down">
-              <i class="fa fa-chevron-down"></i>
+          </div>
+          <!-- Controlli -->
+          <div class="controls-wrapper">
+            <div class="control arrow-up" @click="changeSlide(true)">
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+            <div class="control arrow-down" @click="changeSlide(false)">
+              <i class="fa-solid fa-chevron-down"></i>
             </div>
           </div>
         </div>
